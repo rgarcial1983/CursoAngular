@@ -1,6 +1,14 @@
 <h1>Buscando: <small>{{ filtro }}</small></h1>
 <hr>
 
+<div class="row anitated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No se han encontrado resultados con el criterio: <b>{{ filtro }}</b>
+    </div>
+  </div>
+</div>
+
 <div class="card-columns">
 
     <div class="card anitated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
